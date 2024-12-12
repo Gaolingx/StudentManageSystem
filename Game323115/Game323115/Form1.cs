@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Game323115
 {
     public partial class Form1 : Form
     {
-        int count=0;
+        int count = 0;
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +27,7 @@ namespace Game323115
             string pass = this.textBox2.Text;
             if ((name == "" || pass == ""))
             {
-               
+
                 MessageBox.Show("用户名或密码不能为空");
                 return;
             }
@@ -55,7 +48,7 @@ namespace Game323115
                 MessageBox.Show("登录失败");
                 return;
             }
-          
+
 
         }
 
@@ -68,7 +61,7 @@ namespace Game323115
         private void button4_Click(object sender, EventArgs e)
         {
             zhmm zm = new zhmm();
-          
+
             zm.Show();
             this.Hide();
         }

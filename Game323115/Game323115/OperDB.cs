@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System.Configuration;
 using System.Data;
 using System.Windows.Forms;
@@ -18,7 +13,7 @@ namespace Game323115
         static string strConn = ConfigurationSettings.AppSettings["constring"];
         public static MySqlDataReader QuerySQL(string sql)
         {
-          
+
             string strConn = "server=localhost;database=student;uid=root;password=123";
             MySqlConnection conn = new MySqlConnection(strConn);
             conn.Open();
@@ -34,7 +29,7 @@ namespace Game323115
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             return cmd.ExecuteNonQuery();
         }
-        public static void BindBata(string sql,DataGridView dg)
+        public static void BindBata(string sql, DataGridView dg)
         {
             string strConn = "server=localhost;database=student;uid=root;password=123";
             conn = new MySqlConnection(strConn);
@@ -42,7 +37,7 @@ namespace Game323115
             MySqlDataAdapter ada = new MySqlDataAdapter(sql, conn);
             DataSet ds = new DataSet();
             ada.Fill(ds);
-           // dg.AutoGenerateColumns = false;
+            // dg.AutoGenerateColumns = false;
             dg.DataSource = ds.Tables[0].DefaultView;
         }
     }
