@@ -14,7 +14,7 @@ namespace Game323115
         public static MySqlDataReader QuerySQL(string sql)
         {
 
-            string strConn = "server=localhost;database=student;uid=root;password=123";
+            string strConn = "server=localhost;database=student;uid=root;password=Gao123456";
             MySqlConnection conn = new MySqlConnection(strConn);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -23,7 +23,7 @@ namespace Game323115
         }
         public static int EditSQL(string sql)
         {
-            string strConn = "server=localhost;database=student;uid=root;password=123";
+            string strConn = "server=localhost;database=student;uid=root;password=Gao123456";
             MySqlConnection conn = new MySqlConnection(strConn);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -31,7 +31,7 @@ namespace Game323115
         }
         public static void BindBata(string sql, DataGridView dg)
         {
-            string strConn = "server=localhost;database=student;uid=root;password=123";
+            string strConn = "server=localhost;database=student;uid=root;password=Gao123456";
             conn = new MySqlConnection(strConn);
             conn.Open();
             MySqlDataAdapter ada = new MySqlDataAdapter(sql, conn);
